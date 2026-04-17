@@ -178,7 +178,7 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="https://www.upwork.com/freelancers/" class="nav-cta" target="_blank">Hire Me →</a>
+  <a href="https://www.upwork.com/freelancers/" class="nav-cta" target="_blank" onclick="openUpwork(event)">Hire Me →</a>
   <button class="nav-mobile" onclick="toggleMenu()" id="menuBtn">☰</button>
 </nav>
 
@@ -187,7 +187,7 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
   <a href="#skills" onclick="closeMenu()">Skills</a>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <a href="https://www.upwork.com/freelancers/" class="m-cta" onclick="closeMenu()" target="_blank">Hire Me on Upwork →</a>
+  <a href="https://www.upwork.com/freelancers/" class="m-cta" onclick="closeMenu();openUpwork(event)" target="_blank">Hire Me on Upwork →</a>
 </div>
 
 <!-- HERO -->
@@ -228,6 +228,9 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
       <span class="stack-item">Vercel</span>
       <span class="stack-item">SEO</span>
       <span class="stack-item">WooCommerce</span>
+      <span class="stack-item">PHP</span>
+      <span class="stack-item">AngularJS</span>
+      <span class="stack-item">Bootstrap</span>
     </div>
   </div>
 </div>
@@ -339,6 +342,8 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
           <div class="skill-item"><span class="skill-dot"></span>GSAP Animations</div>
           <div class="skill-item"><span class="skill-dot"></span>Responsive & Mobile-first</div>
           <div class="skill-item"><span class="skill-dot"></span>Cross-browser compatibility</div>
+          <div class="skill-item"><span class="skill-dot"></span>Bootstrap</div>
+          <div class="skill-item"><span class="skill-dot"></span>AngularJS</div>
         </div>
       </div>
       <div class="skill-card fade-up">
@@ -350,6 +355,7 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
           <div class="skill-item"><span class="skill-dot"></span>Formspree / EmailJS</div>
           <div class="skill-item"><span class="skill-dot"></span>Authentication flows</div>
           <div class="skill-item"><span class="skill-dot"></span>Third-party API connections</div>
+          <div class="skill-item"><span class="skill-dot"></span>PHP</div>
         </div>
       </div>
       <div class="skill-card fade-up">
@@ -400,10 +406,8 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
     <h2 style="text-align:center;font-size:clamp(28px,5vw,48px)">Ready to build<br/>something great?</h2>
     <p style="color:var(--muted);font-size:15px;line-height:1.85;margin-top:16px">I'm currently available for freelance projects worldwide. Whether you need a full website, a redesign, an eCommerce store, or an ongoing developer — let's talk.</p>
     <div class="contact-links">
-      <a href="https://www.upwork.com/freelancers/" target="_blank" class="contact-link">💼 Hire on Upwork</a>
-      <a href="mailto:joshua@scaltron.com" class="contact-link">✉️ Send an Email</a>
+      <a href="https://www.upwork.com/freelancers/" target="_blank" class="contact-link" onclick="openUpwork(event)">💼 Message Me on Upwork</a>
       <a href="https://github.com/cyberrar-kia" target="_blank" class="contact-link">⌨️ GitHub</a>
-      <a href="https://scaltron.com" target="_blank" class="contact-link">🌐 scaltron.com</a>
     </div>
   </div>
 </div>
@@ -414,6 +418,10 @@ footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:
 </footer>
 
 <script>
+function openUpwork(e){
+  e.preventDefault();
+  window.open('https://www.upwork.com/freelancers/','_blank');
+}
 function toggleMenu(){
   const m=document.getElementById('mobileMenu');
   const b=document.getElementById('menuBtn');
